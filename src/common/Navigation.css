@@ -1,0 +1,12 @@
+#navigation {
+    font-variant:small-caps;
+    padding:0 5ch 0 1ch;
+    width:10ch;
+    position: absolute;
+    border-bottom-style: inset;
+    margin-top: 8%;
+}
+
+#navigation a {
+    display:block
+}

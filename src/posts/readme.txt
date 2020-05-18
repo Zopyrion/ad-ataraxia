@@ -1,0 +1,31 @@
+---
+Date: Word
+Tags:
+  - stats
+  - history
+---
+
+# Odds & Ends
+
+## *Introducing Probability*
+
+### *Preface*
+
+Paragraph starts here.
+
+> [It is] notable that the Feynman lectures (3 volumes) write about all of physics in 1800 pages, using only 2
+levels of hierarchical headings: chapters and A-level heads in the text. It also uses the methodology of sentences
+which then cumulate sequentially into paragraphs, rather than the grunts of bullet points. Undergraduate Caltech physics
+is very complicated material, but it didn’t require an elaborate hierarchy to organize. <footer> - Quoter </footer>
+
+
+===
+
+## Sidenotes: Footnotes and Marginal Notes
+
+Superscript: 19^th^
+
+One of the most distinctive features of Tufte’s style is his extensive use of sidenotes.This is a sidenote. Sidenotes
+ are like footnotes, except they don’t force the reader to jump their eye to the bottom of the page, but instead
+ display off to the side in the margin. Perhaps you have noticed their use in this document already. You are very astute.
+@Hello I am a side note 2@
