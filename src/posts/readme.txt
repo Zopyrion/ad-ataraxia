@@ -1,6 +1,7 @@
 ---
-Date: Word
-Tags:
+title: introducing probability
+date: 2020-01-01
+tags:
   - stats
   - history
 ---

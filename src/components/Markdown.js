@@ -21,14 +21,14 @@ class Markdown extends React.Component {
             'sup'
         ]);
 
-        md.use(meta)
-
         //md.inline.ruler.push("sidenote", sidenoteRule, {});
         md.use(remarkableStripper)
-
+        md.use(meta)
 
 
         const res = md.render(this.props.plaintext);
+
+
         return (
             <section>
                 <div dangerouslySetInnerHTML={{__html: res}} />
