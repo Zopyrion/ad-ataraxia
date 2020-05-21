@@ -1,5 +1,7 @@
 import React from 'react';
 import BlogPost from "../components/BlogPost";
+import METADATA from '../autogen/metadeta.json';
+
 
 class Home extends React.Component {
 
@@ -7,10 +9,25 @@ class Home extends React.Component {
         super(props);
     }
 
+    test(){
+
+    }
+
     render() {
-        return <BlogPost title="HOME" file="readme.txt"></BlogPost>;
+        const test = 0;
+
+        return (
+
+            <React.Fragment>
+
+                <BlogPost path={17190} preview={true} />
+                <BlogPost path={52288} preview={true} />
+            </React.Fragment>
+
+
+        );
     }
 
 }
-
+//<BlogPost path={52288} preview={true} />
 export default Home;

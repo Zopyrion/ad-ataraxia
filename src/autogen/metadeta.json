@@ -7,7 +7,8 @@
             "tags": [
                 "gaming",
                 "physics"
-            ]
+            ],
+            "file": "date.txt"
         },
         "test2": {
             "title": "test2",
@@ -15,7 +16,8 @@
             "tags": [
                 "gaming",
                 "physics"
-            ]
+            ],
+            "file": "date2.txt"
         },
         "test3": {
             "title": "test3",
@@ -23,7 +25,8 @@
             "tags": [
                 "gaming",
                 "physics"
-            ]
+            ],
+            "file": "date3.txt"
         },
         "qwerty": {
             "title": "qwerty",
@@ -31,7 +34,8 @@
             "tags": [
                 "gaming",
                 "physics"
-            ]
+            ],
+            "file": "qwerty.txt"
         },
         "introducing probability": {
             "title": "introducing probability",
@@ -39,7 +43,8 @@
             "tags": [
                 "stats",
                 "history"
-            ]
+            ],
+            "file": "readme.txt"
         }
     },
     "sorted": [
@@ -55,5 +60,12 @@
         "test3": 52288,
         "qwerty": 17190,
         "introducing probability": 18999
+    },
+    "mappings": {
+        "17190": "qwerty",
+        "18999": "introducing probability",
+        "31590": "test1",
+        "46937": "test2",
+        "52288": "test3"
     }
 }

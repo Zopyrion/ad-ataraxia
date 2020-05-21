@@ -1,10 +1,12 @@
 import React from 'react';
-import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom";
+import {BrowserRouter as Router, Link, Route, Switch, useRouteMatch, useParams} from "react-router-dom";
 import './Navigation.css';
 import BlogPost from "../components/BlogPost";
 import DynamicRoutes from "./DynamicRouter";
 import Home from "../common/Home"
 import METADATA from '../autogen/metadeta.json';
+import Markdown from "../components/Markdown";
+import Readmore from "./Readmore";
 
 class NavBar extends React.Component {
 
@@ -21,7 +23,10 @@ class NavBar extends React.Component {
                         <nav>
                             <ul>
                                 <li>
-                                    <Link to="/">Home</Link>
+                                    <Link to="/" >Home</Link>
+                                </li>
+                                <li>
+                                    <Link to="/projects">Projects</Link>
                                 </li>
                                 <li>
                                     <Link to="/tags">Tags</Link>
@@ -35,21 +40,17 @@ class NavBar extends React.Component {
                                 <Tags />
                             </Route>
 
-                            <Route path="/test2">
-                                <Test2 />
+                            <Route path="/projects">
+                                <Projects />
                             </Route>
 
-                            {routes.data.map((entry) =>
-                                {
-                                    return (
-                                        <Route key={entry.key} path={entry.path}
-                                            render={(props) => <BlogPost {...props} title={entry.title} file={entry.file} />}
-                                        />
-                                        )})
-                            }
+                            <Route path="/posts">
+                                <Topics />
+                            </Route>
+
 
                             <Route path="/">
-                                <Home />
+                                <GoHome />
                             </Route>
 
                         </Switch>
@@ -61,26 +62,47 @@ class NavBar extends React.Component {
 }
 
 
-const routes = {data: [
-        {
-            key: "test1",
-            path: "/31590",
-            file: "qwerty.txt"
+function Topics() {
+    let match = useRouteMatch();
+    return (
 
-        },
-        {
-            key: "test2",
-            path: "/46937",
-            file: "date.txt"
-        }
-    ]
+            <Switch>
+                <Route path={`${match.path}/:topicId`}>
+                    <Topic />
+                </Route>
+
+
+                <Route path={match.path}>
+                    <h3>Please select a topic.</h3>
+                </Route>
+            </Switch>
+
+    );
+}
+
+function Topic() {
+    let { topicId } = useParams();
+    return <BlogPost path={topicId} preview={false} />;
+}
+
+function Projects() {
+
+    return (
+        <React.Fragment>
+
+            <BlogPost path={46937} preview={true} />
+        </React.Fragment>
+
+    );
+}
+
+function GoHome(){
+    return <Home />
 }
 
 
-
-
 function Tags(){
-    return <article><h2>Tags</h2></article>;
+    return (<article><section><h1>Tags</h1><p>Tagger</p></section></article>);
 }
 
 

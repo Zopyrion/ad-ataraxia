@@ -5,13 +5,15 @@ class Readmore extends React.Component {
 
     constructor(props) {
         super(props);
+
     }
 
     render() {
+        //onClick={this.handleClick.bind(this)}
         return (
             <React.Fragment>
                 <div className="readmore">
-                    <a href="https://www.w3schools.com"> Read more ... </a>
+                    <a className="abc" href={'posts/' + this.props.url}  > Read more ... </a>
                 </div>
                 <hr />
             </React.Fragment>
