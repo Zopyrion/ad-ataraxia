@@ -3,7 +3,7 @@ body {
     background-color: snow;
     padding-left: 10%;
     width: 80%;
-
+    overflow-y: scroll;
 
 }
 
