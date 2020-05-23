@@ -23,10 +23,19 @@
             "title": "test3",
             "date": "2018-09-09T00:00:00.000Z",
             "tags": [
-                "gaming",
+                "religion",
                 "physics"
             ],
             "file": "date3.txt"
+        },
+        "dummy": {
+            "title": "dummy",
+            "date": "2020-09-09T00:00:00.000Z",
+            "tags": [
+                "gaming",
+                "physics"
+            ],
+            "file": "dummy"
         },
         "qwerty": {
             "title": "qwerty",
@@ -45,27 +54,68 @@
                 "history"
             ],
             "file": "readme.txt"
+        },
+        "tufte.css": {
+            "title": "tufte.css",
+            "date": "2021-09-09T00:00:00.000Z",
+            "tags": [
+                "misc"
+            ],
+            "file": "tufte.css.txt"
         }
     },
-    "sorted": [
-        "qwerty",
-        "introducing probability",
-        "test1",
-        "test3",
-        "test2"
-    ],
+    "sorted": {
+        "all": [
+            "tufte.css",
+            "dummy",
+            "qwerty",
+            "introducing probability",
+            "test1",
+            "test3",
+            "test2"
+        ],
+        "misc": [
+            "tufte.css"
+        ],
+        "gaming": [
+            "dummy",
+            "qwerty",
+            "test1",
+            "test2"
+        ],
+        "physics": [
+            "dummy",
+            "qwerty",
+            "test1",
+            "test3",
+            "test2"
+        ],
+        "stats": [
+            "introducing probability"
+        ],
+        "history": [
+            "introducing probability"
+        ],
+        "religion": [
+            "test3"
+        ]
+    },
     "routes": {
         "test1": 31590,
         "test2": 46937,
         "test3": 52288,
         "qwerty": 17190,
-        "introducing probability": 18999
+        "introducing probability": 18999,
+        "dummy": 89088,
+        "tufte.css": 12949
     },
     "mappings": {
+        "12949": "tufte.css",
         "17190": "qwerty",
         "18999": "introducing probability",
         "31590": "test1",
         "46937": "test2",
-        "52288": "test3"
+        "52288": "test3",
+        "89088": "dummy"
     }
 }

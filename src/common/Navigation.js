@@ -1,12 +1,9 @@
 import React from 'react';
 import {BrowserRouter as Router, Link, Route, Switch, useRouteMatch, useParams} from "react-router-dom";
-import './Navigation.css';
 import BlogPost from "../components/BlogPost";
-import DynamicRoutes from "./DynamicRouter";
 import Home from "../common/Home"
-import METADATA from '../autogen/metadeta.json';
-import Markdown from "../components/Markdown";
-import Readmore from "./Readmore";
+import DropDownNav from "./DropDownNav";
+
 
 class NavBar extends React.Component {
 
@@ -17,7 +14,7 @@ class NavBar extends React.Component {
     render() {
 
         return (
-            <div >
+            <React.Fragment >
                 <Router>
                     <div id="navigation">
                         <nav>
@@ -28,10 +25,16 @@ class NavBar extends React.Component {
                                 <li>
                                     <Link to="/projects">Projects</Link>
                                 </li>
+
+                                <DropDownNav></DropDownNav>
+
                                 <li>
-                                    <Link to="/tags">Tags</Link>
+                                    <Link to="/projects">Socials</Link>
                                 </li>
+
                             </ul>
+
+
                         </nav>
                     </div>
 
@@ -56,7 +59,7 @@ class NavBar extends React.Component {
                         </Switch>
 
                 </Router>
-            </div>
+            </React.Fragment>
         );
     }
 }
@@ -105,10 +108,6 @@ function Tags(){
     return (<article><section><h1>Tags</h1><p>Tagger</p></section></article>);
 }
 
-
-function Test2(){
-    return <article><h2>Test 2</h2></article>;
-}
 
 
 export default NavBar;

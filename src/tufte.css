@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-/* Import ET Book styles
-   adapted from https://github.com/edwardtufte/et-book/blob/gh-pages/et-book.css */
 
 
 /* Tufte CSS styles */
@@ -203,7 +201,6 @@ a:link, .tufte-underline, .hover-tufte-underline:hover {
     text-shadow: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8, 0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8, -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8, -0.15em 0 #fffff8;
     background-position: 0% 93%, 100% 93%, 0% 93%;
 }
-
 
 
 a:link::selection,

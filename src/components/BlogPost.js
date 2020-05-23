@@ -11,11 +11,11 @@ class BlogPost extends React.Component {
         super(props);
         //let preview = this.props.path !== Parser.get_path(window.location.href);
         this.state = {sections: null, preview: props.preview};
-        console.log(this.props.path)
+
+
     }
 
     componentDidMount() {
-
         const code = METADATA.mappings[this.props.path]
         const path = require("../posts/" + METADATA.all[code].file);
         fetch(path)
@@ -36,7 +36,6 @@ class BlogPost extends React.Component {
         }
 
         if(this.state.preview){
-            // <Readmore url={this.props.path} />
             return (
                     <article>
                         <Markdown key={-1} plaintext={this.state.sections[0]}> </Markdown>
@@ -46,7 +45,10 @@ class BlogPost extends React.Component {
             );
 
         } else {
-            //window.history.replaceState(null, 'Title', this.props.path + "/" + Parser.str_clean(this.props.title));
+            const title = METADATA.mappings[this.props.path];
+            const url = this.props.path + "/" + Parser.str_clean(title);
+            window.history.replaceState(null, "Nov", "/posts/" + url);
+            document.title = title;
             return (
                 <article>
                     {this.state.sections.map((value, index) => {

@@ -4,7 +4,8 @@
     width:10ch;
     position: absolute;
     border-bottom-style: inset;
-    margin-top: 8%;
+    margin-top: 5%;
+    margin-right: 60%;
 }
 
 #navigation a {

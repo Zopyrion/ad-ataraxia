@@ -7,6 +7,7 @@ const Parser = {
 
     str_clean: function(str) {
         str = str.replace(" ", "_")
+        //str = str.replace(".", "_")
         return str
     },
 
