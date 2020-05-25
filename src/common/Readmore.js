@@ -9,11 +9,11 @@ class Readmore extends React.Component {
     }
 
     render() {
-        //onClick={this.handleClick.bind(this)}
+        //onTagToggled={this.handleClick.bind(this)}
         return (
             <React.Fragment>
                 <div className="readmore">
-                    <a className="abc" href={'posts/' + this.props.url}  > Read more ... </a>
+                    <a  href={'/posts/' + this.props.url}  > Read more ... </a>
                 </div>
                 <hr />
             </React.Fragment>

@@ -1,6 +1,7 @@
 import React from 'react';
 import BlogPost from "../components/BlogPost";
 import METADATA from '../autogen/metadeta.json';
+import MultiPreview from "../components/MultiPreview";
 
 
 class Home extends React.Component {
@@ -10,24 +11,13 @@ class Home extends React.Component {
 
     }
 
-    test(){
-
-    }
-
     componentDidMount() {
         document.title = "Ad Ataraxia";
     }
 
     render() {
-        const size = Math.min(METADATA.sorted.all.length, 3)
-
         return (
-            <React.Fragment>
-            {Array(size).fill(1).map((el, i) =>
-                <BlogPost key={i} path={METADATA.routes[METADATA.sorted.all[i]]} preview={true} />
-            )}
-            </React.Fragment>
-
+            <MultiPreview tag="all"/>
         );
     }
 

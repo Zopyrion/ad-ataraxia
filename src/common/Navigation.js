@@ -3,6 +3,10 @@ import {BrowserRouter as Router, Link, Route, Switch, useRouteMatch, useParams} 
 import BlogPost from "../components/BlogPost";
 import Home from "../common/Home"
 import DropDownNav from "./DropDownNav";
+import Tags from "./Tags";
+import Posts from "./Posts";
+import Game from "../components/Game";
+import Contact from "./Contact";
 
 
 class NavBar extends React.Component {
@@ -25,22 +29,17 @@ class NavBar extends React.Component {
                                 <li>
                                     <Link to="/projects">Projects</Link>
                                 </li>
-
-                                <DropDownNav></DropDownNav>
-
                                 <li>
-                                    <Link to="/projects">Socials</Link>
+                                    <Link to="/contact">Socials</Link>
                                 </li>
-
+                                <DropDownNav />
                             </ul>
-
-
                         </nav>
                     </div>
 
                         <Switch>
                             <Route path="/tags">
-                                <Tags />
+                                <GoTags />
                             </Route>
 
                             <Route path="/projects">
@@ -48,7 +47,11 @@ class NavBar extends React.Component {
                             </Route>
 
                             <Route path="/posts">
-                                <Topics />
+                                <GoPosts />
+                            </Route>
+
+                            <Route path="/contact">
+                                <Contact />
                             </Route>
 
 
@@ -65,27 +68,21 @@ class NavBar extends React.Component {
 }
 
 
-function Topics() {
+
+function GoPosts(){
     let match = useRouteMatch();
     return (
-
-            <Switch>
-                <Route path={`${match.path}/:topicId`}>
-                    <Topic />
-                </Route>
-
-
-                <Route path={match.path}>
-                    <h3>Please select a topic.</h3>
-                </Route>
-            </Switch>
-
+        <Posts match={match}/>
     );
+
 }
 
-function Topic() {
-    let { topicId } = useParams();
-    return <BlogPost path={topicId} preview={false} />;
+function GoTags(){
+    let match = useRouteMatch();
+    return (
+        <Tags match={match}/>
+    );
+
 }
 
 function Projects() {
@@ -93,7 +90,9 @@ function Projects() {
     return (
         <React.Fragment>
 
-            <BlogPost path={46937} preview={true} />
+            <article><section><h1>Projects</h1><p>Projects</p></section></article>
+
+            <Game/>
         </React.Fragment>
 
     );
@@ -102,12 +101,5 @@ function Projects() {
 function GoHome(){
     return <Home />
 }
-
-
-function Tags(){
-    return (<article><section><h1>Tags</h1><p>Tagger</p></section></article>);
-}
-
-
 
 export default NavBar;

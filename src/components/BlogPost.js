@@ -40,7 +40,6 @@ class BlogPost extends React.Component {
                     <article>
                         <Markdown key={-1} plaintext={this.state.sections[0]}> </Markdown>
                         <Readmore url={this.props.path} />
-
                     </article>
             );
 
@@ -56,12 +55,9 @@ class BlogPost extends React.Component {
                     })}
                 </article>
             );
-
         }
-
-
     }
-
 }
+
 
 export default BlogPost;

@@ -1,0 +1,33 @@
+.btn {
+    cursor: pointer;
+    border-radius: 0;
+    border-style: solid;
+    margin-bottom: .25rem !important;
+    margin-top: .25rem !important;
+    transition: color .2s ease-in-out,background-color .2s ease-in-out,border-color .2s ease-in-out,box-shadow .2s ease-in-out;
+
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+
+    border-radius: 3px 0 0 3px;
+    display: inline-block;
+
+
+}
+
+.btn-on {
+    color: #fff;
+    border-color: #0098DC !important;
+    background-color: #0098DC !important;
+}
+
+.btn-off {
+    color: #fff;
+    background-color: #9da7af !important;
+    border-color: #8e949a !important;
+}

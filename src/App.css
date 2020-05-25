@@ -13,9 +13,9 @@ body {
 article {
     background-color: snow;
     padding-left: 20%;
-    padding-top: 2%;
+    padding-top: 0;
+    padding-bottom: 0;
 }
-
 
 section > div {
     width: 65%;

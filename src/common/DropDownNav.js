@@ -7,12 +7,12 @@ class DropDownNav extends React.Component {
 
     render() {
         return <li className="dropdown">
-            <Link to="/tags">Posts</Link>
+            <Link to="/posts">Posts</Link>
             <div id="TOC">
                 <ul>
                     {
                         Object.keys(METADATA.sorted).map((key, index) => (
-                            <li><a href={'tags/' + key}><span>#{key}</span></a></li>
+                            <li><a href={"/tags/" + key}><span>#{key}</span></a></li>
                         ))
                     }
                 </ul>

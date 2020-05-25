@@ -1,12 +1,14 @@
 import React from 'react';
 import BlogPost from './components/BlogPost';
 import NavBar from "./common/Navigation";
-import './tufte.css';
+import './css/tufte.css';
 import './common/Navigation.css';
 import './fonts/fonts.css';
 import './App.css';
 import './common/toc.css'
-
+import './components/FilterTag.css'
+import './css/toggle.css'
+import ReactGodot from "react-godot";
 
 
 function App() {
@@ -14,14 +16,7 @@ function App() {
     return (
         <div>
             <NavBar/>
-
-
-
-
-
         </div>
-
-
     );
 }
 
