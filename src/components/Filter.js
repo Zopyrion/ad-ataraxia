@@ -20,7 +20,7 @@ class Filter extends React.Component {
     }
 
     onTagToggled(name, status) {
-
+        console.log(name, status);
     }
 
     render() {

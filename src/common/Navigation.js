@@ -1,6 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Link, Route, Switch, useRouteMatch, useParams} from "react-router-dom";
-import BlogPost from "../components/BlogPost";
+import {BrowserRouter as Router, Link, Route, Switch, useRouteMatch} from "react-router-dom";
 import Home from "../common/Home"
 import DropDownNav from "./DropDownNav";
 import Tags from "./Tags";
@@ -10,10 +9,6 @@ import Contact from "./Contact";
 
 
 class NavBar extends React.Component {
-
-    constructor(props) {
-        super(props);
-    }
 
     render() {
 

@@ -12,7 +12,7 @@ class DropDownNav extends React.Component {
                 <ul>
                     {
                         Object.keys(METADATA.sorted).map((key, index) => (
-                            <li><a href={"/tags/" + key}><span>#{key}</span></a></li>
+                            <li key={key}><a href={"/tags/" + key}><span>#{key}</span></a></li>
                         ))
                     }
                 </ul>

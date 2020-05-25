@@ -5,10 +5,6 @@ import METADATA from '../autogen/metadeta.json';
 
 class MultiPreview extends React.Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     componentDidMount() {
         document.title = "Ad Ataraxia";
     }

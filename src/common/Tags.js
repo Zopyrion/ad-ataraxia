@@ -1,7 +1,5 @@
 import React from 'react';
-import METADATA from '../autogen/metadeta.json';
-import {Link, Route, Switch, useParams} from "react-router-dom";
-import BlogPost from "../components/BlogPost";
+import {Route, Switch, useParams} from "react-router-dom";
 import MultiPreview from "../components/MultiPreview";
 
 
@@ -9,7 +7,6 @@ class Tags extends React.Component {
 
     constructor(props) {
         super(props);
-        console.log(this.props.match);
     }
 
     render() {

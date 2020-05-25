@@ -28,15 +28,6 @@
             ],
             "file": "date3.txt"
         },
-        "dummy": {
-            "title": "dummy",
-            "date": "2020-09-09T00:00:00.000Z",
-            "tags": [
-                "gaming",
-                "physics"
-            ],
-            "file": "dummy"
-        },
         "qwerty": {
             "title": "qwerty",
             "date": "2020-09-09T00:00:00.000Z",
@@ -67,7 +58,6 @@
     "sorted": {
         "all": [
             "tufte.css",
-            "dummy",
             "qwerty",
             "introducing probability",
             "test1",
@@ -78,13 +68,11 @@
             "tufte.css"
         ],
         "gaming": [
-            "dummy",
             "qwerty",
             "test1",
             "test2"
         ],
         "physics": [
-            "dummy",
             "qwerty",
             "test1",
             "test3",

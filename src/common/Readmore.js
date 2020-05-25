@@ -3,13 +3,7 @@ import './Readmore.css';
 
 class Readmore extends React.Component {
 
-    constructor(props) {
-        super(props);
-
-    }
-
     render() {
-        //onTagToggled={this.handleClick.bind(this)}
         return (
             <React.Fragment>
                 <div className="readmore">
@@ -19,7 +13,6 @@ class Readmore extends React.Component {
             </React.Fragment>
         );
     }
-
 }
 
 export default Readmore;

@@ -1,15 +1,9 @@
 import React from 'react';
-import METADATA from '../autogen/metadeta.json';
-import {Link, Route, Switch, useParams, useRouteMatch} from "react-router-dom";
-import Toggle from 'react-toggle';
+import {Route, Switch, useParams} from "react-router-dom";
 import BlogPost from "../components/BlogPost";
 import Filter from "../components/Filter";
 
 class Posts extends React.Component {
-
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         const match = this.props.match;

@@ -5,12 +5,6 @@ import remarkableStripper from '../sidenote.js'
 
 class Markdown extends React.Component {
 
-    constructor(props) {
-        super(props);
-    }
-
-
-
     render() {
         const md = new Remarkable({html: true});
         md.inline.ruler.enable([
