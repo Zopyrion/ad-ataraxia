@@ -10,10 +10,10 @@ class Home extends React.Component {
 
     render() {
         return (
-            <MultiPreview tag="all"/>
+            <MultiPreview tags={['all']} fade={false}/>
         );
     }
 
 }
-//<BlogPost path={52288} preview={true} />
+
 export default Home;

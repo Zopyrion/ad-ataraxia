@@ -2,8 +2,29 @@ import React from 'react';
 import {Route, Switch, useParams} from "react-router-dom";
 import BlogPost from "../components/BlogPost";
 import Filter from "../components/Filter";
+import MultiPreview from "../components/MultiPreview";
+import { Logical } from "../enums";
+import METADATA from '../autogen/metadeta.json';
+
 
 class Posts extends React.Component {
+
+    constructor(props) {
+        super(props);
+        const tags = [];
+        for(const tag in METADATA.sorted){
+            tags.push(tag);
+        }
+        this.state = {
+            logical: Logical.OR,
+            tags: tags
+        }
+        this.onFilterChanged = this.onFilterChanged.bind(this);
+    }
+
+    onFilterChanged(logical, tags){
+        this.setState({logical: logical, tags: tags})
+    }
 
     render() {
         const match = this.props.match;
@@ -17,9 +38,14 @@ class Posts extends React.Component {
                     <article>
                         <section>
                             <h1>Tags</h1><p>Tagger</p>
-                            <Filter />
+
+                            <Filter onFilterChanged={this.onFilterChanged}/>
+
                         </section>
                     </article>
+
+                    <MultiPreview tags={this.state.tags} logical={this.state.logical} />
+
                 </Route>
             </Switch>
         );
@@ -29,7 +55,12 @@ class Posts extends React.Component {
 
 function Post() {
     let { postId } = useParams();
-    return <BlogPost path={postId} preview={false} />;
+    return(
+        <React.Fragment>
+            <BlogPost path={postId} preview={false} />
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        </React.Fragment>
+    );
 }
 
 

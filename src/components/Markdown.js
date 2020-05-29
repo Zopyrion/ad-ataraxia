@@ -1,7 +1,7 @@
 import React from 'react';
 import { Remarkable } from 'remarkable';
 import meta from "remarkable-meta";
-import remarkableStripper from '../sidenote.js'
+import remarkableStripper from './sidenote.js'
 
 class Markdown extends React.Component {
 

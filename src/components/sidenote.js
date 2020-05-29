@@ -52,7 +52,6 @@ module.exports = (md, options) => {
                     var content = state.src.slice(pos, matchStart)
                         .replace(/[ \n]+/g, ' ')
                         .trim();
-                    console.log(content)
                     state.push({type: 'katex', content: content, block: marker.length > 1, level: state.level});
                 }
 

@@ -5,26 +5,22 @@ class FilterTag extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {isToggleOn: true};
         this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick() {
-        this.props.onTagToggled(this.props.name, !this.state.isToggleOn)
-        this.setState(state => ({
-            isToggleOn: !state.isToggleOn
-        }));
+        this.props.onTagToggled(this.props.name)
     }
 
     render() {
         let style = "btn-on"
-        if(!this.state.isToggleOn){
+        if(!this.props.status){
             style = "btn-off"
         }
 
         return (
             <button type="button" onClick={this.handleClick} className={'btn ' + style}>
-                {this.props.name}
+                {this.props.name + " " + this.props.status}
             </button>
         )
     }

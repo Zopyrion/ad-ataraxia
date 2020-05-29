@@ -5,10 +5,6 @@ import MultiPreview from "../components/MultiPreview";
 
 class Tags extends React.Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         const match = this.props.match;
         return (
