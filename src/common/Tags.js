@@ -1,6 +1,7 @@
 import React from 'react';
 import {Route, Switch, useParams} from "react-router-dom";
 import MultiPreview from "../components/MultiPreview";
+import {Logical} from "../enums";
 
 
 class Tags extends React.Component {
@@ -19,7 +20,6 @@ class Tags extends React.Component {
             </Switch>
         );
     }
-
 }
 
 function Tag() {
@@ -29,13 +29,11 @@ function Tag() {
             <article>
                 <section>
                     <h2>#{tag}</h2>
-                    <hr/>
+                    <hr className="style-double"/>
                 </section>
             </article>
-            <MultiPreview tag={tag}/>
+            <MultiPreview tags={ [tag] } logical={ Logical.AND } />
         </React.Fragment>
-
-
     );
 }
 

@@ -5,6 +5,7 @@ import Filter from "../components/Filter";
 import MultiPreview from "../components/MultiPreview";
 import { Logical } from "../enums";
 import METADATA from '../autogen/metadeta.json';
+import Random from "../util/random";
 
 
 class Posts extends React.Component {
@@ -38,13 +39,11 @@ class Posts extends React.Component {
                     <article>
                         <section>
                             <h1>Tags</h1><p>Tagger</p>
-
                             <Filter onFilterChanged={this.onFilterChanged}/>
-
                         </section>
                     </article>
 
-                    <MultiPreview tags={this.state.tags} logical={this.state.logical} />
+                    <MultiPreview tags={ this.state.tags } logical={ this.state.logical } fade={ true }/>
 
                 </Route>
             </Switch>

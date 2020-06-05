@@ -15,3 +15,14 @@
 .readmore {
     padding-bottom: 1rem;
 }
+
+
+@media (max-width: 760px) {
+
+    #navigation {
+        padding:0 0 0 5ch;
+        width:10ch;
+        position: relative;
+        border-bottom-style: none;
+    }
+}

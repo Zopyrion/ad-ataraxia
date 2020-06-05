@@ -1,11 +1,14 @@
 import React from 'react';
 import BlogPost from "../components/BlogPost";
 import METADATA from '../autogen/metadeta.json';
-import {Logical} from '../enums'
+import { Logical } from '../enums'
 import _ from "underscore";
 import FadeIn from 'react-fade-in';
+import Resource from "../resources";
+import Random from "../util/random";
 
 class MultiPreview extends React.Component {
+
 
     componentDidMount() {
         document.title = "Ad Ataraxia";
@@ -49,7 +52,6 @@ class MultiPreview extends React.Component {
             postsURL = this.retrievePostsURL();
         }
 
-
         const size = Math.min(postsURL.length, 3)
         let posts = [];
         for(let i = 0; i < size; i++){
@@ -60,10 +62,10 @@ class MultiPreview extends React.Component {
         // Filter found no results
         if(posts.length === 0){
             return(
-                <FadeIn>
+                <FadeIn key={ Random.rand_key() } >
                     <article>
                         <section>
-                            <p>No posts found with the search criteria.</p>
+                            <p>{ Resource.NO_POSTS_FOUND }</p>
                         </section>
                     </article>
                 </FadeIn>
@@ -74,20 +76,19 @@ class MultiPreview extends React.Component {
         if(this.props.fade){
             return (
                 <React.Fragment>
-                    <FadeIn>
+                    <FadeIn key={ Random.rand_key() } >
                         { posts }
                     </FadeIn>
                     <br /><br /><br /><br /><br /><br />
                 </React.Fragment>
-
             );
-        } else{
+        } else {
             return (
+
                 <React.Fragment>
                     { posts }
                     <br /><br /><br /><br /><br /><br />
                 </React.Fragment>
-
             );
         }
     }

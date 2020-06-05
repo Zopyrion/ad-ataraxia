@@ -15,6 +15,7 @@ tags:
 levels of hierarchical headings: chapters and A-level heads in the text. It also uses the methodology of sentences
 which then cumulate sequentially into paragraphs, rather than the grunts of bullet points. Undergraduate Caltech physics
 is very complicated material, but it didn’t require an elaborate hierarchy to organize. <footer> - Quoter </footer>
+@sidenote@
 
 
 ===

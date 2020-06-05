@@ -12,9 +12,13 @@ import './css/toggle.css'
 function App() {
 
     return (
-        <div>
+        <React.Fragment>
+            <div className="header">
+                <h1>Header</h1>
+                <p>My supercool header</p>
+            </div>
             <NavBar/>
-        </div>
+        </React.Fragment>
     );
 }
 
