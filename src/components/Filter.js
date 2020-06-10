@@ -10,8 +10,11 @@ class Filter extends React.Component {
     constructor(props) {
         super(props);
         const tags = {}
+
+        const setTagSet = new Set(props.setTags);
+
         for (const [key] of Object.entries(METADATA.sorted)) {
-            tags[key] = true
+            tags[key] = setTagSet.has(key);
         }
         this.state = {
             logical: Logical.OR,
@@ -36,7 +39,7 @@ class Filter extends React.Component {
         let numSet = 0;
 
         // Toggle clicked switch
-        for (const [key, value] of Object.entries(this.state.tags)) {
+        for (const [key,] of Object.entries(this.state.tags)) {
             if(name === 'all'){
                 tagsCopy[key] = bool
             } else {

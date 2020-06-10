@@ -1,5 +1,5 @@
 import React from 'react';
-import MultiPreview from "../components/MultiPreview";
+import MultiPreview from "../../components/MultiPreview";
 
 
 class Home extends React.Component {

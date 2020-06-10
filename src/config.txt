@@ -1,0 +1,9 @@
+# Contacts
+twitter=https://www.google.ca/
+youtube=https://www.google.ca/
+linkedin=https://www.google.ca/
+reddit=https://www.google.ca/
+instagram=https://www.google.ca/
+whatsapp=https://www.google.ca/
+discord=https://www.google.ca/
+email=https://www.google.ca/

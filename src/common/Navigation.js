@@ -1,11 +1,11 @@
 import React from 'react';
 import {BrowserRouter as Router, Link, Route, Switch, useRouteMatch} from "react-router-dom";
-import Home from "../common/Home"
+import Home from "./pages/Home"
 import DropDownNav from "./DropDownNav";
-import Tags from "./Tags";
-import Posts from "./Posts";
-import Game from "../components/Game";
-import Contact from "./Contact";
+import Tags from "./pages/Tags";
+import Posts from "./pages/Posts";
+import Contact from "./pages/Contact";
+import METADATA from "../autogen/metadeta.json";
 
 
 class NavBar extends React.Component {
@@ -67,7 +67,7 @@ class NavBar extends React.Component {
 function GoPosts(){
     let match = useRouteMatch();
     return (
-        <Posts match={match}/>
+        <Posts tags={ METADATA.sorted } match={match}/>
     );
 
 }
@@ -87,7 +87,7 @@ function Projects() {
 
             <article><section><h1>Projects</h1><p>Projects</p></section></article>
 
-            <Game/>
+
         </React.Fragment>
 
     );

@@ -1,9 +1,10 @@
 import React from 'react';
 import Markdown from "./Markdown";
-import Readmore from "../common/Readmore";
+import Readmore from "./Readmore";
 import Parser from "../util/parser"
 import METADATA from '../autogen/metadeta.json';
 import CONTENT from '../autogen/content.json';
+import MiniTag from "./MiniTag";
 
 
 class BlogPost extends React.Component {
@@ -28,9 +29,10 @@ class BlogPost extends React.Component {
         }
 
         if(this.state.preview){
+            const reducedPlaintext = this.state.sections[0].replace(/.*(?<=@)(.*)(?=@).*/, "");
             return (
                     <article>
-                        <Markdown key={-1} plaintext={this.state.sections[0]}> </Markdown>
+                        <Markdown key={-1} plaintext={reducedPlaintext}> </Markdown>
                         <Readmore url={this.props.path} />
                     </article>
             );
@@ -38,6 +40,16 @@ class BlogPost extends React.Component {
         } else {
             const title = METADATA.mappings[this.props.path];
             const url = this.props.path + "/" + Parser.str_clean(title);
+            const minitags = [];
+
+
+            const ref = METADATA.all[title];
+            for(const tag of ref.tags){
+                minitags.push(
+                    <MiniTag key={1} tag={tag}/>
+                );
+            }
+
             window.history.replaceState(null, "Nov", "/posts/" + url);
             document.title = title;
             return (
@@ -45,6 +57,9 @@ class BlogPost extends React.Component {
                     {this.state.sections.map((value, index) => {
                         return <Markdown key={index} plaintext={value}> </Markdown>
                     })}
+                    <section>
+                        { minitags }
+                    </section>
                 </article>
             );
         }

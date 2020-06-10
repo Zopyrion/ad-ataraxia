@@ -1,7 +1,7 @@
 import React from 'react';
 import {Route, Switch, useParams} from "react-router-dom";
-import MultiPreview from "../components/MultiPreview";
-import {Logical} from "../enums";
+import MultiPreview from "../../components/MultiPreview";
+import {Logical} from "../../enums";
 
 
 class Tags extends React.Component {

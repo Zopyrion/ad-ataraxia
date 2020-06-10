@@ -9,6 +9,14 @@ import Random from "../util/random";
 
 class MultiPreview extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            visible:false
+        }
+
+    }
+
 
     componentDidMount() {
         document.title = "Ad Ataraxia";
@@ -40,10 +48,6 @@ class MultiPreview extends React.Component {
         return METADATA.sorted['all'];
     }
 
-    componentWillReceiveProps(){
-        this.forceUpdate();
-    }
-
     render() {
         let postsURL = [];
         if(this.props.tags.length === 1 && this.props.tags[0] === 'all'){
@@ -62,7 +66,7 @@ class MultiPreview extends React.Component {
         // Filter found no results
         if(posts.length === 0){
             return(
-                <FadeIn key={ Random.rand_key() } >
+                <FadeIn key={ Random.rand_key() }>
                     <article>
                         <section>
                             <p>{ Resource.NO_POSTS_FOUND }</p>
@@ -76,10 +80,9 @@ class MultiPreview extends React.Component {
         if(this.props.fade){
             return (
                 <React.Fragment>
-                    <FadeIn key={ Random.rand_key() } >
+                    <FadeIn key={ Random.rand_key() }>
                         { posts }
                     </FadeIn>
-                    <br /><br /><br /><br /><br /><br />
                 </React.Fragment>
             );
         } else {
@@ -87,7 +90,6 @@ class MultiPreview extends React.Component {
 
                 <React.Fragment>
                     { posts }
-                    <br /><br /><br /><br /><br /><br />
                 </React.Fragment>
             );
         }

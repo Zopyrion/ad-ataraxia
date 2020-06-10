@@ -40,6 +40,6 @@
     "react-router-dom": "^5.2.0",
     "remarkable": "^2.0.0",
     "remarkable-meta": "^1.0.1",
-    "typescript": "^3.9.3"
+    "readline": "^1.3.0"
   }
 }
