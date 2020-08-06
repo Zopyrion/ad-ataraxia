@@ -1,0 +1,87 @@
+---
+title: Tufte Styled Blog
+date: 2020-09-09
+tags:
+  - project
+---
+
+# Tufte Styled Blog
+
+This is a React blog template based on Dave Liepmann's [Tufte-css](https://edwardtufte.github.io/tufte-css/) with
+support for markdown. Easily write in a human readable text file and let the template convert your markdown to
+a clean and elegant web page.
+
+
+
+## Usage
+Configure settings in /src/config.txt.
+
+Write markdown'd text in a file and place it under ```/src/posts/```. Look at ```sample.txt``` as an example.
+
+Run ``` npm start```.
+
+
+===
+## Markdown usage
+
+The first letter of the first paragraph in a section has special formatting.
+
+Three equal marks denote a new section.
+```
+> ≡≡≡
+```
+
+# This is a top level heading
+```
+> #This is a top level heading
+```
+
+## This is a second level heading
+```
+> ## This is a second level heading
+```
+
+### This is a third level heading
+```
+> ### This is a third level heading
+```
+
+#### This is a forth level heading
+```
+> #### This is a forth level heading
+```
+
+Code blocks are surrounded by tildes.
+```
+```function f(x)```
+```
+
+Superscripts can be used with the caret: 8^th^
+```
+> 8^th^
+```
+
+Cite sources using the \@ symbol.
+@Myself@
+```
+> A statement.
+> @Source@
+```
+
+Quotes are very cool!
+>To thine own self be true. <footer> - Hamlet, Act 1 Scene 3 </footer>
+```
+> Quote. <foooter>  -Quoter </footer>
+```
+
+Links to another site are useful.
+[Click here to go to somewhere.](https://google.com)
+```
+> [Click here to go to somewhere.](https://google.com)
+```
+
+<br/><br/><br/>
+br tags can provide additional spacing if needed.
+```
+> <br/><br/><br/>
+```
